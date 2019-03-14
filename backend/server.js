@@ -7,6 +7,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const errorHandler = require('errorhandler');
 config = require('./db');
+const formationRoutes = require("./routes/formation.route");
 //Configure mongoose's promise to global promise
 mongoose.promise = global.Promise;
 
@@ -30,13 +31,17 @@ if(!isProduction) {
 
 
 //Configure Mongoose
-mongoose.connect(config.DB,{ useNewUrlParser: true });
+mongoose.connect(config.DB, { useNewUrlParser: true }).then(
+  () => {console.log('Database is connected') },
+  err => { console.log('Can not connect to the database'+ err)}
+);
 mongoose.set('debug', true);
 
 //MOdels routes
 require('./Models/Users');
 require('./config/passport');
 app.use(require('./routes'));
+app.use('/formation', formationRoutes);
 
 //Error handlers & middlewares
 if(!isProduction) {
@@ -63,4 +68,5 @@ if(!isProduction) {
     });
   });
   
-  app.listen(8000, () => console.log('Server running on http://localhost:8000/'));
+app.listen(3000, ()=> console.log("Listenig on port 3000"));
+
