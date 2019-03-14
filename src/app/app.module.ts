@@ -1,3 +1,4 @@
+import { FormationModule } from './Modules/formation/formation.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import{ HttpClientModule } from '@angular/common/http';
@@ -16,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    FormationModule,
     AppRoutingModule
   ],
   providers: [],
