@@ -47,7 +47,7 @@ app.use('/formation', formationRoutes);
 if(!isProduction) {
     app.use((err, req, res) => {
       res.status(err.status || 500);
-  
+
       res.json({
         errors: {
           message: err.message,
@@ -56,10 +56,10 @@ if(!isProduction) {
       });
     });
   }
-  
+
   app.use((err, req, res) => {
     res.status(err.status || 500);
-  
+
     res.json({
       errors: {
         message: err.message,
@@ -67,6 +67,6 @@ if(!isProduction) {
       },
     });
   });
-  
+
 app.listen(3000, ()=> console.log("Listenig on port 3000"));
 
