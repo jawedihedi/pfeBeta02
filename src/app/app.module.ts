@@ -8,12 +8,13 @@ import { FooterComponent } from './core/footer/footer.component';
 import { Page404Component } from './core/page404/page404.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    Page404Component,
+    Page404Component 
   ],
   imports: [
     BrowserModule,
