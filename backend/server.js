@@ -6,7 +6,7 @@ const session = require('express-session');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const errorHandler = require('errorhandler');
-config = require('./db');
+config = require('./config/db');
 //Configure mongoose's promise to global promise
 mongoose.promise = global.Promise;
 
