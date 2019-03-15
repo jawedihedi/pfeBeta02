@@ -6,12 +6,11 @@ const session = require('express-session');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const errorHandler = require('errorhandler');
-<<<<<<< HEAD
+ 
 config = require('./config/db');
-=======
-config = require('./db');
+ 
 const formationRoutes = require("./routes/formation.route");
->>>>>>> 821670774c7530f8efced7f5a5e83cc217b58813
+ 
 //Configure mongoose's promise to global promise
 mongoose.promise = global.Promise;
 
@@ -51,7 +50,7 @@ app.use('/formation', formationRoutes);
 if(!isProduction) {
     app.use((err, req, res) => {
       res.status(err.status || 500);
-  
+
       res.json({
         errors: {
           message: err.message,
@@ -60,10 +59,10 @@ if(!isProduction) {
       });
     });
   }
-  
+
   app.use((err, req, res) => {
     res.status(err.status || 500);
-  
+
     res.json({
       errors: {
         message: err.message,
@@ -71,6 +70,6 @@ if(!isProduction) {
       },
     });
   });
-  
+
 app.listen(3000, ()=> console.log("Listenig on port 3000"));
 
