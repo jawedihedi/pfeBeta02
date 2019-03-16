@@ -7,6 +7,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { Page404Component } from './core/page404/page404.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './Modules/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     FormationModule,
+    AuthModule,
     HttpClientModule,
     AppRoutingModule
   ],
