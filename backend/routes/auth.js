@@ -1,5 +1,6 @@
 const jwt = require('express-jwt');
  
+// ychouf kan fama JWT valid f header request ya5edh token sinon yraje3 null
 const getTokenFromHeaders = (req) => {
   const { headers: { authorization } } = req;
 
