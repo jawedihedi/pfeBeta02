@@ -11,6 +11,14 @@ config = require('./config/db');
  
 const formationRoutes = require("./routes/formation.route");
  
+config = require('./config/db');
+ 
+ 
+const formationRoutes = require("./routes/formation.route");
+ 
+  
+                              
+ 
 //Configure mongoose's promise to global promise
 mongoose.promise = global.Promise;
 
