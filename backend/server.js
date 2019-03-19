@@ -6,19 +6,15 @@ const session = require('express-session');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const errorHandler = require('errorhandler');
- 
+
 config = require('./config/db');
- 
+
 const formationRoutes = require("./routes/formation.route");
- 
-config = require('./config/db');
- 
- 
-const formationRoutes = require("./routes/formation.route");
- 
-  
-                              
- 
+
+
+
+
+
 //Configure mongoose's promise to global promise
 mongoose.promise = global.Promise;
 
